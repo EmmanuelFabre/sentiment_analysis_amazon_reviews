@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<!--above script is necessary for stack overflow solution-->
+
+	<meta charset="UTF-8"> 
+
+	<title>Final Project html Page</title>
+
+	<!-- Bring in our boostrap and custom stylesheet -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  	<link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body>
+
+	<header>
+		<h1>Sentiment Analysis : Algorithm trained on dataset of Amazon reviews.</h1>
+	</header>
+
+	<!--create the overall Grid -->
+	<div class="container">
+
+		<!--First Row-->
+		<div class="row">
+			<div class="col-md-8">
+				<table border = 1>
+					{%for key, value in result.items() %}
+						<tr>
+							<th> {{ key }} </th>
+							<td> {{ value }} </td>
+						</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

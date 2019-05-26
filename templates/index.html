@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<!--above script is necessary for stack overflow solution-->
+
+	<meta charset="UTF-8"> 
+
+	<title>Final Project html Page</title>
+
+	<!-- Bring in our boostrap and custom stylesheet -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  	<link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body>
+
+	<header>
+		<h1>Sentiment Analysis : Algorithm trained on dataset of Amazon reviews.</h1>
+	</header>
+
+	<!--create the overall Grid -->
+	<div class="container">
+
+		<!--First Row-->
+		<div class="row">
+			<div class="col-md-8">
+				<h2> Please submit your positive or negative reviews.</h2> -->
+			</div>
+		</div>
+
+		<!--Second Row-->
+		<div class="col-md-8">
+			<form action = "http://127.0.0.1:5000/result" method = "POST">
+			<p> User Review <input type = "text" name = "User Review" /></p>
+			<p><input type = "submit" value = "sentiment analysis" /></p>
+        	</form>
+        </div>
+    </div>
+
+
+		<!--Third Row-->
+		<div class="row">
+
+			<div class="col-md-10">
+				<h3> My project incorporated a dataset of 4 Million random Amazon reviews used to train and test my algorithm's accuracy at predicting whether a user review is positive or negative. The algorithm was trained no a dataset of 3.6 Million reviews, and tested on a dataset of 400,000 reviews. Both datasets excluded 3 star reviews since they are considered 'neutral' in sentiment. Both files consisted therefore of either negative 1-2 star reviews, or positive 4-5 star reviews. <br><br><br>The first step required that I convert the .txt files into .csv files.  I read in the text files using Jupyter Notebooks and used the Pandas Library.  I then uploaded the clean .csv files to AWS cloud storage for faster processing. Using Google Colab python notebooks, I read in the files from AWS using the python PySpark library, which is a python version of spark. Spark is a distributed data processing engine, as well as a machine learning library. I decided to use Google Colab rather than Jupyter Notebooks because you can modify the notebooks environment without potentially modifying your whole computer's environment. THis was crucial to being able to work with PySpark because this library is compatible with Java 8, and not Java 11, which is currently installed on my file. <br><br><br> To build my sentiment analysis algorithm, I needed was to preprocess the data by:<br><br> 
+				- Tokenizing the words in each comment; in other words, creating a list of words for each comment.<br><br>
+				- Removing stop words such as "and" or "the".<br><br>
+				- Performing NLP hashing to create an index for each word and each word's frequency.<br><br>
+				- Term Frequency / Inverse Document Frequency to get the tf-idf weight/importance of each word to the training document.<br><br>
+				- Separate the comments class (negative as 1, positive as 2) from the comments column, into its own 'label' column. The 'label' column is crucial to implementing the Naive Bayes model.<br><br>
+				- Using PySpark's Naive Bayes Machine Learning Classification Model on the training data.<br><br><br> The final step was transforming the model onto the test data, to evaluate its accuracy. The accuracy of the model at predicting review sentiment was 82.782%.  </h3>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
+
+
+
+
+
+<!-- NOTES -->
+<!--you dont have to close the break. removed </br>-->
+<!-- not sure I brought in all the nex bootstrap stylesheets...or perhaps too many? -->
+
