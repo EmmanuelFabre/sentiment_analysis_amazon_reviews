@@ -41,3 +41,11 @@ Spark’s native hadoop library is supported on *nix platforms only. The platfor
 
 > https://stackoverflow.com/questions/52201242/apache-spark-unable-to-load-native-hadoop-library-for-your-platform-using-bu
 
+
+## Datasets:
+
+Training Data
+Link TBD (Current uploading to Google Drive)
+
+Test Data
+https://drive.google.com/file/d/1YPFlEDj2gG7ImYQ1rGQApW9bxq4UT9Wp
