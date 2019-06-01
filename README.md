@@ -25,7 +25,10 @@ The final step was transforming the model onto the test data, to evaluate its ac
 ## Challenges:
 
 I learned a lot from this project. The first thing I will do next time I start a project is to check for compatibility.  Whether it’s between python libraries, between libraries and Operating Systems, or between libraries and integrated software like Java. This step could have saved me many headaches. 
+
+```
 Unsupported class file major version 55 error 
+```
 
 It turns out that PySpark is incompatible with Java 8. If I tried to install Java 8 from Oracle, it would not let me since it would detect a higher version already installed on my machine. I tried to brew cask install Java 8, but there was no Java 8 cask. I searched high and low until I found an open source version of a JDK 8 cask which performed exactly like Java 8. By working with a Google Colab notebook, I was able to set the Java version to Java 8 specifically for that notebook. This resolved my issues with PySpark and Java. 
 
