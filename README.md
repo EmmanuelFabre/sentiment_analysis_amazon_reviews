@@ -44,8 +44,10 @@ Spark’s native hadoop library is supported on *nix platforms only. The platfor
 
 ## Datasets:
 
-Training Data
+*These datasets are too large to upload to Git and must be hosted on a file sharing service*
+
+Training Data - 
 Link TBD (Current uploading to Google Drive)
 
-Test Data
+Test Data - 
 https://drive.google.com/file/d/1YPFlEDj2gG7ImYQ1rGQApW9bxq4UT9Wp
